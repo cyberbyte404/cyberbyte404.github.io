@@ -83,14 +83,16 @@ section {
 }
 
 .invisible {
-    display: none;
+    display: none !important;
 }
 
 .mobile-nav-icon {
+    display: none;
     width: 30px;
 }
 
 .mobile-nav {
+    display: none;
     background-color: rgb(25, 25, 25);
     width: 100%;
     height: 0px;

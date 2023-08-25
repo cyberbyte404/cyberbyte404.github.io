@@ -1,0 +1,75 @@
+.courses-sec .loader {
+    /* background-color: aqua; */
+    border: 10px solid whitesmoke;
+    border-top-color: #34db55;
+    border-bottom-color: red;
+    border-left-color: yellow;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.courses-auth-alert {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    background-color: black;
+
+    animation: slide-in-bottom 1.5s ease-in-out;
+}
+
+@keyframes slide-in-bottom {
+    0% { transform: translate(0, 100%); }
+
+    100% {}
+}
+
+.courses-auth-alert p {
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.courses-auth-alert a {
+    font-size: 18px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.courses-sec {
+    padding-top: 100px;
+}
+
+.courses-sec .heading {
+    font-size: 35px;
+    letter-spacing: 2px;
+    font-family: 'ADLaM Display', cursive;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.courses-sec .grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+    margin: 0;
+}
