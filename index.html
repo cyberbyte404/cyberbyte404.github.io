@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/index.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <title>CyberByte 404</title>
+</head>
+
+<body>
+  <div class="navbar">
+
+    <div class="flex-wrapper">
+      <ul>
+        <li class="nav-item text" onclick="shiftRoute('/home')">Home</li>
+        <li class="nav-item text" onclick="shiftRoute('/courses')">Courses</li>
+        <!-- <li class="nav-item text" onclick="shiftRoute('')">About</li> -->
+        <li class="nav-item text" onclick="shiftRoute('/contact')">Contact</li>
+      </ul>
+
+      <svg onclick="shiftMenu()" class="mobile-nav-icon invisible" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+        <g id="SVGRepo_iconCarrier">
+          <path d="M4 17H20M4 12H20M4 7H20" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round"></path>
+        </g>
+      </svg>
+
+      <img src="./assets/cyberbyte-logo.png" class="text" alt="logo">
+    </div>
+
+    <div class="mobile-nav invisible">
+      <div class="grid-wrapper">
+        <span class="nav-item text" onclick="shiftRoute('/home'); shiftMenu()">Home</span>
+        <span class="nav-item text" onclick="shiftRoute('/courses'); shiftMenu()">Courses</span>
+        <!-- <span class="nav-item text" onclick="shiftRoute('/')">About</span> -->
+        <span class="nav-item text" onclick="shiftRoute('/contact'); shiftMenu()">Contact</span>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="app">
+    <div class="home-route routes">
+      <section class="header-sec">
+      </section>
+    </div>
+
+    <div class="courses-route routes route-blocker">
+      <section class="header-sec">
+        Courses
+      </section>
+    </div>
+
+    <div class="contact-route routes route-blocker">
+      <section class="header-sec">
+        Contact
+      </section>
+    </div>
+
+  </div>
+
+  <!-- scripts -->
+  <script src="./logic/index.js"></script>
+  <script src="./logic/router.js"></script>
+  <script src="./logic/random.js" type="module"></script>
+</body>
+
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Courses</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8); /* Transparent black */
+      padding: 10px 0;
+    }
+    .navbar-content {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      color: white;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+    }
+    .login-form {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    .login-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: none;
+      border-radius: 3px;
+    }
+    .login-form button {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="courses.html">Courses</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
+
+  <div class="login-form">
+    <h2>Login</h2>
+    <form id="login-form">
+      <input type="email" id="email" placeholder="Email">
+      <input type="password" id="password" placeholder="Password">
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-auth.js"></script>
+  <script>
+    // Initialize Firebase
+    const firebaseConfig = {
+      // Your Firebase config here
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    const loginForm = document.querySelector("#login-form");
+
+    loginForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const email = loginForm["email"].value;
+      const password = loginForm["password"].value;
+
+      try {
+        const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
+        // Handle successful login
+      } catch (error) {
+        console.error(error.message);
+      }
+    });
+  </script>
+</body>
+</html> -->
