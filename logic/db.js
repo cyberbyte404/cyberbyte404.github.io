@@ -66,7 +66,7 @@ getDocs(coursesCollection).then(function (snapshot) {
 
         courses_grid.innerHTML = oldHTML + `
             <div class="course">
-                <a href=".course?id=${rawCourse.id}" style="text-decoration:none;">
+                <a href="/course?id=${rawCourse.id}" style="text-decoration:none;">
                     <img src="${formattedCourseData.thumbnail}" />
                     <div class="wrapper"> 
                         <div class="title-price-div">
